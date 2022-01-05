@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+html {
+    min-height: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #F3FFFD;
+    min-height: 100%;
+    height: 100%;
+
+
+
+}
+header{
+    position: static;
+width: 1440px;
+height: 1133px;
+left: 0px;
+top: 0px;
+
+background: #F3FFFD;
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+margin: 0px auto;
+}
+.background{
+    position: absolute;
+    width: 1440px;
+    height: 825px;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 204px;
+background-image:url(../static/img/back-fura.png);
+margin:0 auto;
+
+}
+
+
+
+.collapse a:hover {
+    color: white !important;
+    
+}
+
+.navbar-brand img{
+  width: 250x;
+  height: 70px;
+
+}
