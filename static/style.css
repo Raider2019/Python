@@ -22,19 +22,14 @@ body {
 
 #header{
     width: 1440px;
-
-    background-image:url(../static/img/Group-bg.png) ;
-    background-size: cover;
  height: 890px;
     margin: 0 auto;
 
 }
 
-
-
-.collapse a:hover {
-    color: green !important;
-    
+.background-header{
+    background-image:url(../static/img/Group-bg.png) ;
+    background-size: cover;
 }
 
 .navbar-brand img{
@@ -51,6 +46,10 @@ body {
     text-align: right;
     color: white !important;
 
+}
+ a:hover{
+  background-color: #00CCA6 ;
+  
 }
 #main-content{
 
@@ -92,9 +91,7 @@ body {
   
 
 }
-#header .card-deck{
-    padding: 30px 30px
-}
+
 #header  .card {
     margin-top: 80px;
    
@@ -129,11 +126,43 @@ margin: 20px 20px;
 
 
 }
+
 #header .color-card3{
     color: white  !important;
 }
 #main-block{
     width: 1440px;
     height: 1475px;
+    margin: 20px auto;
+}
+#main-block h2{
+    font-family:  'Montserrat', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 57px;
+    letter-spacing: 0.2px;
+
+}
+#main-block #main-content{
+    width: 1440px;
+    height: 1300px;
     margin: 0 auto;
+}
+.background-main-block{
+    background-image: url(../static/img/main-block-bg.png);
+    background-size:cover;
+}
+#main-block #main-content .card-deck .card{
+    width: 430px;
+    height: 400px;
+    margin: 20px 20px;
+
+
+}
+#main-block #main-content .card-deck .card img{
+    width: 108px;
+    height: 108px;
+    margin: 20px auto;
+
 }

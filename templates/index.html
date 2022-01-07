@@ -11,79 +11,155 @@
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <!-- CSS -->
   <link rel="stylesheet" href="static/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=Roboto:wght@100;400&display=swap"
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Oswald&family=Roboto:wght@100;400&display=swap"
     rel="stylesheet">
   <title>Lab5</title>
 </head>
 
 <body>
-  
-  <div class="container">
-  <header>
-      <div class="background">  
+  <div id="header">
+    <div class="container`">
+
+      <div class="background-header">
+
         <div class="container">
-          <nav class="navbar navbar-expand-lg    navbar-light ">
-            <a class="navbar-brand" href="#"><img src="static/img/logo.svg"   alt=""> Вантажні перевезення </a>   
+          <nav class="navbar navbar-expand-lg    navbar-dark ">
+            <a class="navbar-brand" href="#"><img src="static/img/logo.svg" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
-                <span class="navbar-toggler-icon"></span>
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
+              <span class="navbar-toggler-icon">
+
+              </span>
             </button>
             <div class="collapse navbar-collapse  " id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Головна
-                            <span class="sr-only"></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Функції</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Ціни</a>
-                    </li>
-                </ul>
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                  <a class="nav-link" href="/index">Головна
+                    <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link .rgba-green-strong" href="index.html">Функції</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Ціни</a>
+                </li>
+              </ul>
             </div>
-        </nav>
-        
+          </nav>
+
         </div>
-        
+        <div class="container">
+          <div class="row justify-content-center">
+            <div id="main-content">
+              <h1 class="text-center">Вантажні <br> перевеження</h1>
+              <h4 class="text-center">Надійний сервіс, хороші ціни</h4>
+            </div>
+
+
+          </div>
+
+          <div class="row justify-content-center">
+
+            <div class=" d-flex">
+              <div class="card">
+                <img src="static/img/handshake.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h3 class="card-title">Понад 6 000 клієнтів вже працюють із нами</h3>
+
+                </div>
+              </div>
+              <div class="card">
+                <img src="static/img/truck.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h3 class="card-title">Понад 100 000 рейсів на рік</h3>
+
+                </div>
+              </div>
+              <div class="card " style="background-color: #00CCA6; ">
+                <img src="static/img/insurance.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h3 class="card-title color-card3">Повне офорилення</h3>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      
-   
-        
-      
-       
-      
-  
+    </div>
+  </div>
+  <div id="main-block">
+    <div class="row justify-content-center mb-5">
+      <h2 class="">Послуги компаній</h2>
+    </div>
+    <div class="background-main-block">
+      <div id="main-content">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="card-deck">
+              <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Заголовок карточки</h5>
+                  <p class="card-text">Это более широкая карта с вспомогательным текстом ниже в качестве естественного
+                    перехода к дополнительному контенту. Этот контент немного длиннее.</p>
+                </div>
+               
+              </div>
+              <div class="card">
+                <img src="static/img/test.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Заголовок карточки</h5>
+                  <p class="card-text">Эта подсказка имеет вспомогательный текст ниже как естественный ввод к
+                    дополнительному контенту.</p>
+                </div>
+              
+            </div>
+          </div>
+            <div class="row justify-content-center">
+              <div class="card-deck">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Заголовок карточки</h5>
+                    <p class="card-text">Это более широкая карта с вспомогательным текстом ниже в качестве естественного
+                      перехода к дополнительному контенту. Этот контент немного длиннее.</p>
+                  </div>
+                 
+                </div>
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Заголовок карточки</h5>
+                    <p class="card-text">Эта подсказка имеет вспомогательный текст ниже как естественный ввод к
+                      дополнительному контенту.</p>
+                  </div>
+                
+                </div>
+              </div>
+            </div>
+
+          
+        </div>
+      </div>
 
 
-    
 
 
+      <!-- Вариант 1: пакет jQuery и Bootstrap (включает Popper) -->
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+      </script>
 
-
-  
-
-
-  </header>
-
-</div>
-
-
-
-
-
-
-  <!-- Вариант 1: пакет jQuery и Bootstrap (включает Popper) -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
-    integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
-  </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
+      </script>
 
 </body>
 
