@@ -178,9 +178,8 @@ a:hover {
 
 #main-block #main-content .card-deck .card {
     width: 430px;
-    height: 420px;
-    margin: 20px 20px;
-
+    height: 350px;
+    margin: 20px ;
 
 }
 
@@ -201,6 +200,8 @@ a:hover {
 }
 #main-block #main-content p{
     font-family:'Montserrat', sans-serif;
+    margin: 0;
+ 
 font-weight: 500;
     font-size: 14px;
     line-height: 20px;
