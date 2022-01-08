@@ -13,32 +13,45 @@ body {
     background-color: #F3FFFD;
     min-height: 100%;
     height: 100%;
-    max-width: 100%;
-    width: 100%;
+;
+
 
 
 
 }
+.wrapper {
+    margin-right: auto; /* 1 */
+    margin-left:  auto; /* 1 */
+  
+    max-width: 1440px; /* 2 */
+  
+    padding-right: 10px; /* 3 */
+    padding-left:  10px; /* 3 */
+  }
 
-#header{
+#header {
     width: 1440px;
- height: 890px;
-    margin: 0 auto;
+    height: 890px;
+   
 
 }
 
-.background-header{
-    background-image:url(../static/img/Group-bg.png) ;
+.background-header {
+    background-image: url(../static/img/Group-bg.png);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
-.navbar-brand img{
-  width: 250x;
-  height: 70px;
+
+.navbar-brand img {
+    width: 250px;
+    height: 70px;
 
 }
-.nav-item a{
-    font-family:  'Montserrat', sans-serif;
+
+.nav-item a {
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: bold;
     line-height: 22px;
@@ -47,59 +60,58 @@ body {
     color: white !important;
 
 }
- a:hover{
-  background-color: #00CCA6 ;
-  
-}
-#main-content{
 
-  
-   
-    margin-top: 80px 
-    
-    
+a:hover {
+    color: #00CCA6 !important;
 
 }
-#main-content h1{
 
-    font-family:  'Montserrat', sans-serif;
+#main-content {
+
+
+
+    margin-top: 40px
+}
+
+#main-content h1 {
+
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight:bold;
+    font-weight: bold;
     font-size: 58px;
     line-height: 80px;
-  
-    padding-top:40px ;
+
+    padding-top: 40px;
     letter-spacing: 0.2px;
-    
+
     color: white;
- 
-  
+
+
 
 }
-#main-content h4{
- 
-    font-family:  'Montserrat', sans-serif;
+
+#main-content h4 {
+
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight:normal;
+    font-weight: normal;
     font-size: 20px;
 
 
     letter-spacing: 0.2px;
     padding-top: 40px;
     color: white;
- 
-  
+
+
 
 }
 
-#header  .card {
-    margin-top: 80px;
-   
-    width: 328px;
+#header .card {
+
+
+    width: 324px;
     height: 254px;
-    display: flex;
-flex-direction: column;
-margin: 20px 20px;
+    margin: 20px 20px;
 
 
 
@@ -108,17 +120,18 @@ margin: 20px 20px;
 }
 
 
-#header  .card img{
-  
-   padding-left: 40px;
-   padding-top: 35px;
-    width:108px;
-    height:108px;
+#header .card img {
+
+    padding-left: 40px;
+    padding-top: 35px;
+    width: 108px;
+    height: 108px;
 }
-#header .card  h3{
-    font-family:  'Montserrat', sans-serif;
+
+#header .card h3 {
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight:bold;
+    font-weight: bold;
     font-size: 24px;
     letter-spacing: 0.1px;
     line-height: 32px;
@@ -127,16 +140,19 @@ margin: 20px 20px;
 
 }
 
-#header .color-card3{
-    color: white  !important;
+#header .color-card3 {
+    color: white !important;
 }
-#main-block{
+
+#main-block {
     width: 1440px;
     height: 1475px;
-    margin: 20px auto;
+    margin-top: 40px;
+
 }
-#main-block h2{
-    font-family:  'Montserrat', sans-serif;
+
+#main-block h2 {
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-style: normal;
     font-size: 40px;
@@ -144,25 +160,55 @@ margin: 20px 20px;
     letter-spacing: 0.2px;
 
 }
-#main-block #main-content{
+
+#main-block #main-content {
     width: 1440px;
     height: 1300px;
-    margin: 0 auto;
+    
+
 }
-.background-main-block{
+
+.background-main-block {
     background-image: url(../static/img/main-block-bg.png);
-    background-size:cover;
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    background-position: center center;
+ 
 }
-#main-block #main-content .card-deck .card{
+
+#main-block #main-content .card-deck .card {
     width: 430px;
-    height: 400px;
+    height: 420px;
     margin: 20px 20px;
 
 
 }
-#main-block #main-content .card-deck .card img{
+
+#main-block #main-content .card-deck .card img {
     width: 108px;
     height: 108px;
     margin: 20px auto;
 
+}
+#main-block #main-content h5{
+    font-family:'Montserrat', sans-serif;
+    font-weight:bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #252B42;
+    text-align: center;
+}
+#main-block #main-content p{
+    font-family:'Montserrat', sans-serif;
+font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+color: black;
+text-align: center;
+}
+#main-block #main-content p::before{
+    padding: 10px;
+    content:"•"
 }
