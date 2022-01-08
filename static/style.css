@@ -230,7 +230,7 @@ font-weight: bold;
 }
 .features-list h6::before{
     content:url(../static/img/done.svg);
-    padding: 20px;
+    padding: 10px;
     
 }
 .features-list h6{
@@ -241,7 +241,7 @@ font-weight: bold;
     font-size:20px;
     line-height: 24px;
     letter-spacing: 0.4px;
-    margin: 20px;
+  
     
 
 }
