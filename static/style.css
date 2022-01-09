@@ -7,33 +7,28 @@
 html {
     min-height: 100%;
     height: 100%;
-    min-weight:1440px;
 }
 
 body {
     background-color: #F3FFFD;
     min-height: 100%;
     height: 100%;
-min-width:1080px;
-
-;
+    min-width: 1440px;
 
 
 
 
 }
-.wrapper {
+#container {
     margin-right: auto; /* 1 */
     margin-left:  auto; /* 1 */
   
     max-width: 1440px; /* 2 */
-  
-    padding-right: 10px; /* 3 */
-    padding-left:  10px; /* 3 */
+
   }
 
 #header {
-    width: 1080px;
+    width: 1440px;
     height: 890px;
    
 
@@ -43,7 +38,7 @@ min-width:1080px;
     background-image: url(../static/img/Group-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
-    
+    background-position: center center;
 }
 
 
@@ -84,7 +79,7 @@ a:hover {
     font-size: 58px;
     line-height: 80px;
 
-    padding-top: 40px;
+    padding-top: 20px;
     letter-spacing: 0.2px;
 
     color: white;
@@ -108,12 +103,13 @@ a:hover {
 
 
 }
- #header .card {
+
+#header .card {
 
 
     width: 324px;
     height: 254px;
-    margin:20px 20px;
+    margin: 20px 20px;
 
 
 
@@ -138,7 +134,7 @@ a:hover {
     letter-spacing: 0.1px;
     line-height: 32px;
     color: #252B42;
-    margin:0
+
 
 }
 
@@ -148,7 +144,7 @@ a:hover {
 
 #main-block {
     width: 1440px;
-    height: 1475px;
+    height: 1385px;
     margin-top: 40px;
 
 }
@@ -164,16 +160,18 @@ a:hover {
 }
 
 #main-block #main-content {
-    width: 1440px;
-    height: 1300px;
+   width: 1440px;
+    height: 1200px;
+ 
     
 
 }
 
 .background-main-block {
     background-image: url(../static/img/main-block-bg.png);
-    background-size: 100% 100%;
+    background-size: contain;
     background-repeat:no-repeat;
+    background-position: center center;
  
 }
 
@@ -215,12 +213,13 @@ text-align: center;
     content:"•"
 }
 #for-clients{
-    width: 1440px;
+  max-width: 1440px;
     height: 465px;
     background-color:#252B42;
+    margin-top: 40px;
 }
 #for-clients h2{
- margin-top: 90px;
+ margin-top: 20px;
  color: white;
  font-family:'Montserrat', sans-serif;
 font-weight: bold;
@@ -247,3 +246,40 @@ font-weight: bold;
     
 
 }
+@media (max-width: 768px) {
+    body{
+        min-width: 1080px;
+    }
+    #header{
+        width: 1080px;
+    }
+    #header h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    #header .card h3{
+        font-size: 20px;
+    }
+    #main-block  {
+        width: 1080px;
+height:2000px;
+    
+
+    }
+    #main-block #main-content{
+        width: 1080px;
+        height: 1500px;
+    }
+    #for-clients{
+        width: 1080px;
+    }
+  }
+  
+
+  @media (min-width: 768px) {
+    
+
+
+    }
+ 
+  
