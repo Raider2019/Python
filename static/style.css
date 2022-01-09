@@ -41,7 +41,7 @@ body {
     background-image: url(../static/img/Group-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    
 }
 
 
@@ -173,7 +173,6 @@ a:hover {
     background-image: url(../static/img/main-block-bg.png);
     background-size: 100% 100%;
     background-repeat:no-repeat;
-    background-position: center center;
  
 }
 
