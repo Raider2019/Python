@@ -248,10 +248,10 @@ font-weight: bold;
 }
 @media (max-width: 768px) {
     body{
-        min-width: 1080px;
+        min-width: 1000px;
     }
     #header{
-        width: 1080px;
+        width: 1200px;
     }
     #header h1 {
         font-size: 40px;
@@ -271,15 +271,11 @@ height:2000px;
         height: 1500px;
     }
     #for-clients{
-        width: 1080px;
+        width: 1200px;
+ 
     }
   }
   
 
-  @media (min-width: 768px) {
-    
-
-
-    }
  
   
