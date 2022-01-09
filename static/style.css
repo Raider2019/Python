@@ -144,7 +144,7 @@ a:hover {
 
 #main-block {
     width: 1440px;
-    height: 1385px;
+    height: 2000px;
     margin-top: 40px;
 
 }
@@ -161,7 +161,7 @@ a:hover {
 
 #main-block #main-content {
    width: 1440px;
-    height: 1200px;
+    height: 1500px;
  
     
 
@@ -175,14 +175,15 @@ a:hover {
  
 }
 
-#main-block #main-content .card-deck .card {
+#main-block #main-content  .card {
     width: 430px;
     height: 420px;
-    margin: 20px 
+        margin: 20px;
+ 
 
 }
 
-#main-block #main-content .card-deck .card img {
+#main-block #main-content .card img {
     width: 108px;
     height: 108px;
     margin: 20px auto;
@@ -246,6 +247,43 @@ font-weight: bold;
     
 
 }
+#contact-form{
+    width: 1440px;
+    height: 1094px;
+    margin-top: 50px;
+
+
+}
+.contact-form{
+    background-color:#252B42;
+    background-size:cover;
+}
+#contact-form h2{
+    color:white;
+    margin-top:50px;
+    margin-bottom:50px ;
+    font-family:'Montserrat', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+     font-size:40px;
+     line-height:57px;
+     letter-spacing: 0.2px;
+     
+}
+#contact-form p{
+    color:white;
+    margin-top:50px;
+    margin-bottom:50px ;
+    font-family:'Montserrat', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+     font-size:14x;
+     line-height:20px;
+     letter-spacing: 0.2px;
+     
+}
+    
+
 @media (max-width: 768px) {
     body{
         min-width: 1000px;
