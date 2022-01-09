@@ -109,7 +109,7 @@ a:hover {
 
 }
 
-#header .card {
+#header.card-deck .card {
 
 
     width: 324px;
