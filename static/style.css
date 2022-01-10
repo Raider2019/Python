@@ -42,7 +42,7 @@ body {
     background-color: #F3FFFD;
     background-size: 100% 100%;
    
-
+    margin-bottom:0px;
    
 
 
@@ -131,6 +131,7 @@ a:hover {
     top: 220px;
     margin-left: 50px;
     margin-right: 50px;
+ 
 
 
 }
@@ -420,9 +421,11 @@ color: #737373;
     
         
         }
-     
+        #header{
+            margin-bottom:90px ;
+        }
         #main-block{
-            margin-top:120px;
+            margin-top:90px;
 
         }
         #header .card h3{
@@ -437,9 +440,11 @@ color: #737373;
     
         
         }
-     
+        #header{
+            margin-bottom:90px ;
+        }
         #main-block{
-            margin-top:120px;
+            margin-top:90px;
 
         }
         #header .card h3{
@@ -454,8 +459,11 @@ color: #737373;
     
         
         }
+        #header{
+            margin-bottom:90px ;
+        }
         #main-block{
-            margin-top:120px;
+            margin-top:90px;
 
         }
         #header .card h3{
