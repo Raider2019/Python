@@ -43,7 +43,7 @@ body {
     background-size: 100% 100%;
    
 
-    margin-bottom:40px;
+   
 
 
 
@@ -87,7 +87,7 @@ a:hover {
 
 
 
-    margin-top: 40px
+    margin-top: 40px;
 }
 
 #main-content h1 {
@@ -413,11 +413,33 @@ color: #737373;
     }
  
  
- 
+    @media (min-width: 100px) and (max-width: 767px) { 
+        .nav-item a {
+    
+            font-size: 24px;
+    
+        
+        }
+     
+        #main-block{
+            margin-top:90px;
+
+        }
+        #header .card h3{
+            font-size: 20px;
+        }
+    }
  
     @media (min-width: 576px) and (max-width: 767px) { 
+        .nav-item a {
+    
+            font-size: 24px;
+    
+        
+        }
+     
         #main-block{
-            margin-top:80px;
+            margin-top:90px;
 
         }
         #header .card h3{
@@ -426,8 +448,14 @@ color: #737373;
     }
  
     @media ((min-width:576px) and (max-width:992px)) {
-        #header{
-            margin-top:80px;
+        .nav-item a {
+    
+            font-size: 24px;
+    
+        
+        }
+        #main-block{
+            margin-top:90px;
 
         }
         #header .card h3{
