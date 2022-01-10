@@ -422,7 +422,7 @@ color: #737373;
         }
      
         #main-block{
-            margin-top:90px;
+            margin-top:120px;
 
         }
         #header .card h3{
@@ -439,7 +439,7 @@ color: #737373;
         }
      
         #main-block{
-            margin-top:90px;
+            margin-top:120px;
 
         }
         #header .card h3{
@@ -447,7 +447,7 @@ color: #737373;
         }
     }
  
-    @media ((min-width:576px) and (max-width:992px)) {
+    @media (min-width:576px) and (max-width:992px) {
         .nav-item a {
     
             font-size: 24px;
@@ -455,7 +455,7 @@ color: #737373;
         
         }
         #main-block{
-            margin-top:90px;
+            margin-top:120px;
 
         }
         #header .card h3{
