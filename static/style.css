@@ -43,7 +43,7 @@ body {
     background-size: 100% 100%;
    
 
-    margin-bottom:80px;
+    margin-bottom:40px;
 
 
 
@@ -411,3 +411,26 @@ color: #737373;
 .footer img{
     padding: 25px 25px;
     }
+ 
+ 
+ 
+ 
+    @media (min-width: 576px) and (max-width: 767px) { 
+        #header{
+            margin-bottom:80px;
+
+        }
+        #header .card h3{
+            font-size: 40px;
+        }
+    }
+ 
+    @media ((min-width:576px) and (max-width:992px)) {
+        #header{
+            margin-bottom:90px;
+
+        }
+        #header .card h3{
+            font-size: 20px;
+        }
+      }
