@@ -416,14 +416,14 @@ color: #737373;
     }
  
  
-    @media (min-width: 100px) and (max-width: 575px) { 
+    @media (min-width: 100px) and (max-width: 992px) { 
   
         #header{
             width: 150%
         }
         #header .card{
 
-   display: none    ;
+   display: none;
 
         }
         #main-block{
@@ -462,69 +462,4 @@ color: #737373;
 
     
  
-    @media (min-width: 576px) and (max-width: 767px) { 
     
-        #header{
-            width: 100%;
-          
-        }
-        
-        #header .card{
-     display: none;
-
-        }
-        #main-block{
-            width: 100%
-       
-
-        }
-        #header .card h3{
-            font-size: 20px;
-            
-        }
-       #for-clients{
-            width: 100%
-        }
-        #about-us{
-            width:100%
-        }
-        .contact-form{
-            width: 100%
-        }
-        .footer{
-            width: 100%
-        }
-        
-    }
- 
-    @media (min-width:768px) and (max-width:992px) {
-  
-        #header{
-            width: 100%;
-        }
-        #header .card{
- display: none;
-
-        }
-        #main-block{
-            width: 100%
-       
-
-        }
-        #header .card h3{
-            font-size: 20px;
-            
-        }
-       #for-clients{
-            width: 100%
-        }
-        #about-us{
-            width:100%
-        }
-        .contact-form{
-            width: 100%
-        }
-        .footer{
-            width: 100%
-        }
-      }
