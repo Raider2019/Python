@@ -30,7 +30,7 @@ header {
 
     background-image: url(../static/img/Group-bg.png);
     background-color: #F3FFFD;
-    background-size:  100% 100%  ;
+    background-size:  cover ;
     background-repeat:no-repeat;
 
 
@@ -118,7 +118,7 @@ header .card {
 
     width:  fit-content;
 
-    height: fit-content;
+
     margin-left: 50px;
     margin-right: 50px;
  
@@ -176,8 +176,8 @@ header .color-card3 {
 
 }
 #main-block #main-content .card {
-    width: 430px;
-    height: 420px;
+    width: 20rem;
+    height: fit-content;
     margin: 20px;
 
 
@@ -301,7 +301,7 @@ background-color: #252B42;
 .contact-form {
 
 
-    height: 100%;
+   
     background-color: white;
 
   
@@ -324,7 +324,7 @@ background-color: #252B42;
 
 
 .contact-form form {
-    width: 510px;
+    width:100%;
     color: #252B42;
 }
 
@@ -387,7 +387,7 @@ color: #737373;
     line-height: 35px;
 }
 header .card h3 {
-    font-size: 28px;
+    font-size: 20px;
     line-height: 35px;
 }
 #main-block h2 {
@@ -416,11 +416,5 @@ font-size:20px;
     font-size: 20px;
     line-height: 35px;
 }
-.contact-form h3{
-    font-size: 20px;
-    line-height: 35px;
-}
-.contact-form form label{
-    font-size: 20px;
-}
+
 }
