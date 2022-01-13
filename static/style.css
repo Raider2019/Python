@@ -24,24 +24,7 @@ max-width: 100%;
 }
 
 
-header {
 
-
-
-    background-image: url(../static/img/Group-bg.png);
-    background-color: #F3FFFD;
-    background-size:  cover ;
-    background-repeat:no-repeat;
-
-
-   
-
-   
-
-
-
-
-}
 .navbar{
     margin: 0;
  
@@ -63,7 +46,7 @@ header {
     line-height: 22px;
     letter-spacing: 0.2px;
     text-align: start;
-color: white !important;
+color: black !important;
 
 }
 
@@ -80,15 +63,15 @@ color: white !important;
     margin-top: 40px;
 }
 
-header #main-content h1 {
+header  #main-content h1 {
 
-    font-family: 'Montserrat', sans-serif;
+
     font-style: normal;
     font-weight: bold;
     font-size: 58px;
     line-height: 80px;
 
-    padding-top: 20px;
+
     letter-spacing: 0.2px;
 
     color: white;
@@ -102,7 +85,7 @@ header #main-content h4 {
 
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 28px;
 
 
     letter-spacing: 0.2px;
@@ -170,7 +153,7 @@ header .color-card3 {
 #main-block #main-content{
     background-image:url(../static/img/main-block-bg.png);
     background-repeat:no-repeat;
-
+    background-size:cover;
     background-position:center center;
     
 
@@ -374,18 +357,33 @@ color: #737373;
 .footer img{
     padding: 25px 25px;
     }
-@media (max-width:1200px){
-    body{
-        margin: 0 auto;
+@media (max-width:768px){
+ 
+    header  #main-content h1 {
+
+
+       
+        font-size:28px;
+        line-height: 35px;
+        top:25%
+    
+     
+        
+
+    
+    
+    
     }
-   header #main-content h1{
-       font-size: 28px;
-       line-height: 35px;
-   }
-   header #main-content h4{
-    font-size: 20px;
-    line-height: 35px;
-}
+    
+    header #main-content h4 {
+    
+        font-size: 16px;
+        line-height: 25px;
+        padding-top: 5px;
+    
+    
+    }
+    
 header .card h3 {
     font-size: 20px;
     line-height: 35px;
@@ -394,27 +392,35 @@ header .card h3 {
     font-size: 28px;
     line-height: 35px;
 }
-#main-block #main-content h5{
-    font-size: 20px;
-    line-height: 35px;
-    
-}
-#main-block #main-content h5{
-    font-size: 28px;
-    line-height: 35px;
-    
-}
 
-#for-clients h2{
-    font-size: 28px;
+#main-block #main-content h5{
+    font-size:16px;
     line-height: 35px;
+    
+}#main-block #main-content p{
+    font-size:14px;
+    line-height: 35px;
+
+    
 }
-.features-list h6{
-font-size:20px;
+#for-clients h2{     font-size: 25px;
+    line-height: 35px;}
+#features-list h6{
+    font-size: 14px;
+    line-height: 35px;
 }
 #about-us h6{
-    font-size: 20px;
+    font-size: 16px;
     line-height: 35px;
 }
-
+.contact-form h3{
+    font-size: 18px;
+    line-height: 35px;
 }
+}
+
+
+
+
+
+
