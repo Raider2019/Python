@@ -308,6 +308,21 @@ line-height: 24px;
 letter-spacing: 0.2px;
 color: #737373;
 }
+.contacts-block{
+    background-color:white;
+    height:auto;
+}
+.phone::before{
+    content: url(../static/img/bx_bx-phone.svg);
+    padding:20px;
+    margin-top: 10px;
+}
+
+.map::before{
+    content: url(../static/img/bx_bx-map.svg);
+    padding:20px;
+    margin-top: 10px;
+}
 .footer img{
     padding: 25px 25px;
     }
@@ -345,7 +360,13 @@ header .card h3 {
     font-size: 28px;
     line-height: 35px;
 }
+#main-block #main-content .card {
+    width: 15rem;
+    height: auto;
+    margin: 20px;
 
+
+}
 #main-block #main-content h5{
     font-size:16px;
     line-height: 35px;
