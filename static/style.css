@@ -17,7 +17,7 @@ body {
     font-size: 16px;
 
   
-max-width: 100%;
+
 
 
 
@@ -25,10 +25,6 @@ max-width: 100%;
 
 
 
-.navbar{
-    margin: 0;
- 
-}
 
 
 
@@ -56,14 +52,9 @@ color: black !important;
 }
 
 
- header #main-content {
 
 
-
-    margin-top: 40px;
-}
-
-header  #main-content h1 {
+  #main-content h1 {
 
 
     font-style: normal;
@@ -80,7 +71,7 @@ header  #main-content h1 {
 
 }
 
-header #main-content h4 {
+ #main-content h4 {
 
 
     font-style: normal;
@@ -89,51 +80,14 @@ header #main-content h4 {
 
 
     letter-spacing: 0.2px;
-    padding-top: 40px;
+    
     color: white;
 
 
 
 }
 
-header .card {
- 
 
-    width:  fit-content;
-
-
-    margin-left: 50px;
-    margin-right: 50px;
- 
-
-
-}
-
-
-header .card img {
-
-    padding-left: 40px;
-    padding-top: 35px;
-    width: 108px;
-    height: 108px;
-}
-
-header .card h3 {
-
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    letter-spacing: 0.1px;
-    line-height: 30px;
-    color: #252B42;
-
-
-
-}
-
-header .color-card3 {
-    color: white !important;
-}
 
 
 
@@ -153,7 +107,7 @@ header .color-card3 {
 #main-block #main-content{
     background-image:url(../static/img/main-block-bg.png);
     background-repeat:no-repeat;
-    background-size:cover;
+    background-size:contain;
     background-position:center center;
     
 
@@ -365,8 +319,7 @@ color: #737373;
        
         font-size:28px;
         line-height: 35px;
-        top:25%
-    
+     
      
         
 
@@ -374,12 +327,14 @@ color: #737373;
     
     
     }
-    
+    header  .position-absolute{
+        top:25%
+    }
     header #main-content h4 {
     
         font-size: 16px;
-        line-height: 25px;
-        padding-top: 5px;
+        line-height: 20px;
+        padding-top: 0px;
     
     
     }
