@@ -9,6 +9,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/contacts')
+def contacts():
+    return render_template("contatcts.html")
+
 
 #Start
     if  __name__ == "__main__":

@@ -379,8 +379,8 @@ header .card h3 {
 }
 #for-clients h2{     font-size: 25px;
     line-height: 35px;}
-#features-list h6{
-    font-size: 14px;
+.features-list h6{
+    font-size: 16px;
     line-height: 35px;
 }
 #about-us h6{
