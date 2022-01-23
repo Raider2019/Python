@@ -37,7 +37,7 @@ body {
 
 .navbar .nav-item a {
   
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     line-height: 22px;
     letter-spacing: 0.2px;
@@ -52,7 +52,10 @@ color: black !important;
 }
 
 
+.navbar-light .navbar-brand{
+    color: #252B42;;
 
+}
 
   #main-content h1 {
 
@@ -165,7 +168,7 @@ color: black !important;
 #for-clients h2 {
     margin-top: 20px;
     color: white;
-    font-family: 'Montserrat', sans-serif;
+
     font-weight: bold;
     font-size: 40px;
     line-height: 57px;
@@ -212,7 +215,7 @@ background-color: #252B42;
     color: white;
     margin-top: 50px;
     margin-bottom: 50px;
-    font-family: 'Montserrat', sans-serif;
+
     font-weight: bold;
     font-style: normal;
     font-size: 40px;
@@ -226,7 +229,7 @@ background-color: #252B42;
     color: white;
     margin-top: 50px;
     margin-bottom: 50px;
-    font-family: 'Montserrat', sans-serif;
+
     font-weight: 500;
     font-style: normal;
     font-size: 14x;
@@ -281,7 +284,7 @@ background-color: #252B42;
 .contact-form .btn{
   
     width:100%;
-    font-family: 'Montserrat', sans-serif;
+
     font-size: 20px;
     font-weight: bold;
     line-height: 22px;
@@ -311,7 +314,9 @@ color: #737373;
 .contacts-block{
     background-color:white;
     height:auto;
+ 
 }
+
 .phone::before{
     content: url(../static/img/bx_bx-phone.svg);
     padding:20px;
@@ -323,6 +328,12 @@ color: #737373;
     padding:20px;
     margin-top: 10px;
 }
+.contacts-block h5{
+    color: #252B42;
+    font-size: 25px;
+    padding: 10px;
+}
+
 .footer img{
     padding: 25px 25px;
     }
