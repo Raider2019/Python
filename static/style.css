@@ -129,7 +129,16 @@ color: black !important;
     margin: 20px auto;
 
 }
+#main-block #main-content .card button{
+  width: 100%;
 
+  
+}
+#main-block #main-content .card button a{
+    text-decoration: none;
+    color: white;
+  
+  }
 #main-block #main-content h5 {
 
     font-weight: bold;
