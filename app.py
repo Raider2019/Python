@@ -2,8 +2,8 @@ from flask import Flask, render_template,redirect,url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from flask_wtf import FlaskForm
-from wtforms.fields import IntegerField, StringField,EmailField, TelField,DateField, TimeField
-from wtforms.validators import DataRequired,Email
+from wtforms.fields import IntegerField, StringField,EmailField, TelField,DateField, TimeField,DecimalField
+from wtforms.validators import DataRequired,Email,NumberRange, ValidationError
 
 
 app = Flask(__name__)
@@ -25,23 +25,23 @@ class User(db.Model):
     street_start  =  db.Column(db.String(150))
     street_finish  =  db.Column(db.String(150))
     pay_method =  db.Column(db.String(50))
-
+def my_length_check(form, field):
+    if len(field.data) > 10:
+        raise ValidationError('Field must be less than 50 characters') 
 
 #Форма
 class ApplicationForm(FlaskForm):
-    name = StringField(label= 'Ваше ім`я', validators = [DataRequired()],render_kw = {"placeholder": "ПІБ"},)
+    name = StringField(label= 'Ваше ім`я', validators = [DataRequired(), my_length_check],render_kw = {"placeholder": "ПІБ"},)
     email = EmailField(label='Ваша електрона адреса',validators = [DataRequired(), Email()])
     namber_phone = TelField(label='Ваш номер телефона' , validators = [DataRequired()] )
     type_wantazy = StringField(label='Вантаж', validators = [DataRequired()],render_kw={"placeholder":"Вкажіть товар якій треба доставити"} )
-    weight = IntegerField(label='Вага вантажу',validators = [DataRequired()],render_kw={"placeholder":"  кг, тонн"})
-    datatime = TimeField(label="Дата і час відправлення",validators = [DataRequired()],render_kw={"placeholder":"ДД/ММ/РР ГГ:ММ"},format = '%H-%M')
+    weight = IntegerField(label='Вага вантажу',validators = [DataRequired(), NumberRange(min=10,max=10000)],render_kw={"placeholder":"  кг абр тонн"})
+    datatime = DateField(label="Дата і час відправлення",validators = [DataRequired()],render_kw={"placeholder":"ДД/ММ/РР ГГ:ММ"},format = '%Y-%m-%d')
     city_start = StringField(label= "Місто відправника", validators = [DataRequired()] )
     street_start = StringField(label= "Вулиця відправника", validators = [DataRequired()] )
     city_finish = StringField(label= "Місто отримувача", validators = [DataRequired()])
     street_finish = StringField(label= "Вулиця отримувача", validators = [DataRequired()])
     pay_method = StringField(label= "Спосіб оплати", validators = [DataRequired()])
-
-
 
 @app.route('/', methods = ['GET', 'POST'])
 def index():
@@ -58,6 +58,10 @@ def index():
 @app.route('/contacts')
 def contacts():
     return render_template("contatcts.html")
+
+@app.route('/price')
+def price():
+    return render_template("price.html")
 
 if  __name__ == "__main__":
         app.run(DEBUG = True)
