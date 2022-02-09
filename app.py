@@ -14,29 +14,28 @@ db = SQLAlchemy(app)
 #Модель
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80) )
+    name = db.Column(db.String(255) )
     email = db.Column(db.String(120))
     namber_phone = db.Column(db.String(11))
     type_wantazy = db.Column(db.String(150))
     weight = db.Column(db.Integer)
-    datetime = db.Column(db.String(20))
+    date = db.Column(db.Date)
+    time = db.Column(db.Time)
     city_start = db.Column(db.String(50))
     city_finish =  db.Column(db.String(50))
     street_start  =  db.Column(db.String(150))
     street_finish  =  db.Column(db.String(150))
     pay_method =  db.Column(db.String(50))
-def my_length_check(form, field):
-    if len(field.data) > 10:
-        raise ValidationError('Field must be less than 50 characters') 
 
 #Форма
 class ApplicationForm(FlaskForm):
-    name = StringField(label= 'Ваше ім`я', validators = [DataRequired(), my_length_check],render_kw = {"placeholder": "ПІБ"},)
+    name = StringField(label= 'Ваше ім`я', validators = [DataRequired()],render_kw = {"placeholder": "ПІБ"},)
     email = EmailField(label='Ваша електрона адреса',validators = [DataRequired(), Email()])
     namber_phone = TelField(label='Ваш номер телефона' , validators = [DataRequired()] )
     type_wantazy = StringField(label='Вантаж', validators = [DataRequired()],render_kw={"placeholder":"Вкажіть товар якій треба доставити"} )
     weight = IntegerField(label='Вага вантажу',validators = [DataRequired(), NumberRange(min=10,max=10000)],render_kw={"placeholder":"  кг абр тонн"})
-    datatime = DateField(label="Дата і час відправлення",validators = [DataRequired()],render_kw={"placeholder":"ДД/ММ/РР ГГ:ММ"},format = '%Y-%m-%d')
+    date = DateField(label="Дата відправлення",validators = [DataRequired()],format = '%Y-%m-%d')
+    time = TimeField(label="Час відправлення",validators = [DataRequired()],format = '%H:%M')
     city_start = StringField(label= "Місто відправника", validators = [DataRequired()] )
     street_start = StringField(label= "Вулиця відправника", validators = [DataRequired()] )
     city_finish = StringField(label= "Місто отримувача", validators = [DataRequired()])
@@ -47,9 +46,9 @@ class ApplicationForm(FlaskForm):
 def index():
     form = ApplicationForm()
     if form.validate_on_submit():
-            user =  User(name = form.name.data, email = form.email.data, namber_phone = form.namber_phone.data, type_wantazy = form.type_wantazy.data, datetime = form.datatime.data,
+            user =  User(name = form.name.data, email = form.email.data, namber_phone = form.namber_phone.data, type_wantazy = form.type_wantazy.data, date = form.date.data,
         city_start = form.city_start.data, street_start = form.street_start.data, city_finish = form.city_finish.data, street_finish = form.street_finish.data, 
-        pay_method = form.pay_method.data, weight = form.weight.data)
+        pay_method = form.pay_method.data, weight = form.weight.data, time = form.time.data)
             db.session.add(user)
             db.session.commit()
      

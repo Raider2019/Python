@@ -41,7 +41,9 @@ margin-bottom: 100px;
     border: 0;
 
 }
-
+.navbar{
+    width: 100%;
+}
 .navbar .nav-item a {
   
     font-size: 16px;
@@ -318,11 +320,13 @@ padding: 40px 40px;
 
     position: absolute;
     bottom: 0;
+    left:0;
     width: 100%;
     /* Set the fixed height of the footer here */
     height: 100px;
     background-color: #f5f5f5;
-
+    padding-left: 15px;
+    padding-right: 15px;
 
 }
 .footer p{
@@ -427,6 +431,9 @@ header .card h3 {
 }
 h1{
     font-size: 25px;
+}
+.footer{
+    height: 220px;
 }
 }
 
