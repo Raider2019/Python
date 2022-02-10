@@ -365,7 +365,9 @@ color: #737373;
     padding: 25px 25px;
     }
 @media (max-width:768px){
- 
+ body{
+    margin-bottom: 220px;
+ }
   #main-content h1 {
 
 

@@ -2,8 +2,8 @@ from flask import Flask, render_template,redirect,url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from flask_wtf import FlaskForm
-from wtforms.fields import IntegerField, StringField,EmailField, TelField,DateField, TimeField,DecimalField
-from wtforms.validators import DataRequired,Email,NumberRange, ValidationError
+from wtforms.fields import IntegerField, StringField,EmailField, TelField,DateField,DecimalField,SelectField
+from wtforms.validators import DataRequired,Email,NumberRange, length
 
 
 app = Flask(__name__)
@@ -16,31 +16,33 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255) )
     email = db.Column(db.String(120))
-    namber_phone = db.Column(db.String(11))
+    namber_phone = db.Column(db.String(13))
     type_wantazy = db.Column(db.String(150))
     weight = db.Column(db.Integer)
     date = db.Column(db.Date)
-    time = db.Column(db.Time)
-    city_start = db.Column(db.String(50))
-    city_finish =  db.Column(db.String(50))
+    time = db.Column(db.String(6))
+    city_start = db.Column(db.String(150))
+    city_finish =  db.Column(db.String(150))
     street_start  =  db.Column(db.String(150))
     street_finish  =  db.Column(db.String(150))
     pay_method =  db.Column(db.String(50))
+    isActive = db.Column(db.String(60), default = "В обробці" )
+
 
 #Форма
 class ApplicationForm(FlaskForm):
     name = StringField(label= 'Ваше ім`я', validators = [DataRequired()],render_kw = {"placeholder": "ПІБ"},)
     email = EmailField(label='Ваша електрона адреса',validators = [DataRequired(), Email()])
-    namber_phone = TelField(label='Ваш номер телефона' , validators = [DataRequired()] )
+    namber_phone = TelField(label='Ваш номер телефона' , validators = [DataRequired()],render_kw={"placeholder":"+380XXXXXXXXX"} )
     type_wantazy = StringField(label='Вантаж', validators = [DataRequired()],render_kw={"placeholder":"Вкажіть товар якій треба доставити"} )
     weight = IntegerField(label='Вага вантажу',validators = [DataRequired(), NumberRange(min=10,max=10000)],render_kw={"placeholder":"  кг абр тонн"})
     date = DateField(label="Дата відправлення",validators = [DataRequired()],format = '%Y-%m-%d')
-    time = TimeField(label="Час відправлення",validators = [DataRequired()],format = '%H:%M')
-    city_start = StringField(label= "Місто відправника", validators = [DataRequired()] )
+    time = StringField(label="Час відправлення",validators = [DataRequired(), length(max=5)],render_kw={"placeholder":" гг:мм"})
+    city_start = StringField(label= "Місто відправника", validators = [DataRequired()])
     street_start = StringField(label= "Вулиця відправника", validators = [DataRequired()] )
     city_finish = StringField(label= "Місто отримувача", validators = [DataRequired()])
     street_finish = StringField(label= "Вулиця отримувача", validators = [DataRequired()])
-    pay_method = StringField(label= "Спосіб оплати", validators = [DataRequired()])
+    pay_method = StringField(label= "Спосіб оплати", validators = [DataRequired()],render_kw={"placeholder":" Карткою, готівкою"} )
 
 @app.route('/', methods = ['GET', 'POST'])
 def index():
@@ -61,6 +63,11 @@ def contacts():
 @app.route('/price')
 def price():
     return render_template("price.html")
+    
+@app.route('/search')
+def search():
+    return render_template("search.html")
+
 
 if  __name__ == "__main__":
         app.run(DEBUG = True)
