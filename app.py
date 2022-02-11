@@ -1,4 +1,4 @@
-from flask import Flask, render_template,redirect,url_for
+from flask import Flask, render_template,redirect,url_for,request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from flask_wtf import FlaskForm
@@ -28,6 +28,9 @@ class User(db.Model):
     pay_method =  db.Column(db.String(50))
     isActive = db.Column(db.String(60), default = "В обробці" )
 
+    def __repr__(self):
+        return '<Name %r>' % self.name
+
 
 #Форма
 class ApplicationForm(FlaskForm):
@@ -44,6 +47,15 @@ class ApplicationForm(FlaskForm):
     street_finish = StringField(label= "Вулиця отримувача", validators = [DataRequired()])
     pay_method = StringField(label= "Спосіб оплати", validators = [DataRequired()],render_kw={"placeholder":" Карткою, готівкою"} )
 
+class AppCheck(FlaskForm):
+      email = EmailField(label='Ваша електрона адреса',validators = [DataRequired(), Email()])
+
+
+class SearchForm(FlaskForm):
+       type_wantazy = StringField(label='Знайти', validators = [DataRequired()] )
+
+
+
 @app.route('/', methods = ['GET', 'POST'])
 def index():
     form = ApplicationForm()
@@ -58,15 +70,25 @@ def index():
     return render_template('index.html',form = form)
 @app.route('/contacts')
 def contacts():
-    return render_template("contatcts.html")
+    return render_template ("contatcts.html")
 
 @app.route('/price')
 def price():
     return render_template("price.html")
     
-@app.route('/search')
+@app.route('/search', methods = ['GET', 'POST'])
 def search():
-    return render_template("search.html")
+    form = AppCheck(request.form)
+    forms = SearchForm()
+    if form.validate_on_submit():
+        result = User.query.filter_by(email = form.email.data)
+        return render_template('result.html', app  = result, forms = forms)
+
+
+    return render_template("search.html", form = form)
+
+
+
 
 
 if  __name__ == "__main__":
