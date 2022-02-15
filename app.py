@@ -2,7 +2,7 @@ from flask import Flask, render_template,redirect,url_for,request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from flask_wtf import FlaskForm
-from wtforms.fields import IntegerField, StringField,EmailField, TelField,DateField,DecimalField,SelectField
+from wtforms import IntegerField, StringField,EmailField, TelField,DateField,DecimalField, SelectField
 from wtforms.validators import DataRequired,Email,NumberRange, length
 
 
@@ -12,6 +12,13 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///Perevoski.db'
 db = SQLAlchemy(app)
  
 #Модель
+
+class Addres(db.Model):
+     id = db.Column(db.Integer, primary_key=True)
+     citys = db.Column(db.String(255))
+
+
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255) )
@@ -21,6 +28,7 @@ class User(db.Model):
     weight = db.Column(db.Integer)
     date = db.Column(db.Date)
     time = db.Column(db.String(6))
+    date_dostavki = db.Column(db.String(20), default = "-")
     city_start = db.Column(db.String(150))
     city_finish =  db.Column(db.String(150))
     street_start  =  db.Column(db.String(150))
@@ -41,8 +49,8 @@ class ApplicationForm(FlaskForm):
     weight = IntegerField(label='Вага вантажу',validators = [DataRequired(), NumberRange(min=10,max=10000)],render_kw={"placeholder":"  кг абр тонн"})
     date = DateField(label="Дата відправлення",validators = [DataRequired()],format = '%Y-%m-%d')
     time = StringField(label="Час відправлення",validators = [DataRequired(), length(max=5)],render_kw={"placeholder":" гг:мм"})
-    city_start = StringField(label= "Місто відправника", validators = [DataRequired()])
-    street_start = StringField(label= "Вулиця відправника", validators = [DataRequired()] )
+    city_start = SelectField(label= "Місто відправника",choices=[],validators = [DataRequired()])
+    street_start = StringField(label= "Вулиця відправника", validators = [DataRequired()],render_kw={"placeholder":"Вкажіть вулицю"}  )
     city_finish = StringField(label= "Місто отримувача", validators = [DataRequired()])
     street_finish = StringField(label= "Вулиця отримувача", validators = [DataRequired()])
     pay_method = StringField(label= "Спосіб оплати", validators = [DataRequired()],render_kw={"placeholder":" Карткою, готівкою"} )
@@ -51,14 +59,13 @@ class AppCheck(FlaskForm):
       email = EmailField(label='Ваша електрона адреса',validators = [DataRequired(), Email()])
 
 
-class SearchForm(FlaskForm):
-       type_wantazy = StringField(label='Знайти', validators = [DataRequired()] )
-
 
 
 @app.route('/', methods = ['GET', 'POST'])
 def index():
+
     form = ApplicationForm()
+    form.city_start.choices = [(city.city_start) for city in User.query]
     if form.validate_on_submit():
             user =  User(name = form.name.data, email = form.email.data, namber_phone = form.namber_phone.data, type_wantazy = form.type_wantazy.data, date = form.date.data,
         city_start = form.city_start.data, street_start = form.street_start.data, city_finish = form.city_finish.data, street_finish = form.street_finish.data, 
@@ -79,10 +86,10 @@ def price():
 @app.route('/search', methods = ['GET', 'POST'])
 def search():
     form = AppCheck(request.form)
-    forms = SearchForm()
+
     if form.validate_on_submit():
-        result = User.query.filter_by(email = form.email.data)
-        return render_template('result.html', app  = result, forms = forms)
+        result = User.query.filter_by(email = form.email.data).order_by(User.id.desc()).limit(10)
+        return render_template('result.html', app  = result)
 
 
     return render_template("search.html", form = form)
